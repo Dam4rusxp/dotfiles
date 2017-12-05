@@ -1,0 +1,5 @@
+alias free='free -h'
+alias ls='ls -AFlh --color=auto'
+alias fuck='sudo !! '
+alias du='du -sh'
+alias df='df -h'

@@ -1,0 +1,6 @@
+[submodule ".dot/stowsh"]
+	path = .dot/stowsh
+	url = https://github.com/williamsmj/stowsh
+[submodule "vim/.vim/bundle/vim-sensible"]
+	path = vim/.vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible

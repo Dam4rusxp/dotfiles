@@ -1,0 +1,4 @@
+# Interactivity check
+[[ $- != *i* ]] && return
+
+export EDITOR=vim
