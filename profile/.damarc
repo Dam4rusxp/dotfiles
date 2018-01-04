@@ -1,4 +1,7 @@
 # Interactivity check
 [[ $- != *i* ]] && return
 
-export EDITOR=vim
+vimpath=$(which vim)
+if [ -f $vimpath ]; then
+    export EDITOR=vim
+fi
