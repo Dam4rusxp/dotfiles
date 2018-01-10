@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Wrapper script to execute git commands with deploy keys
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SSH_KEY="$DIR/.ssh/id_rsa"
+
+# trap 'rm -f /tmp/.git_ssh.$$' 0
+
+echo "ssh -i $SSH_KEY \$@" > /tmp/.git_ssh.$$
+chmod +x /tmp/.git_ssh.$$
+export GIT_SSH=/tmp/.git_ssh.$$
+
+# in case the git command is repeated
+[ "$1" = "git" ] && shift
+
+git "$@"
