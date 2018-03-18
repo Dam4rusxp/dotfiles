@@ -1,6 +1,8 @@
 # Interactivity check
 [[ $- != *i* ]] && return
 
+export HISTCONTROL=ignoredups:ignoreboth
+
 vimpath=$(which vim)
 if [ -f $vimpath ]; then
     export EDITOR=vim
